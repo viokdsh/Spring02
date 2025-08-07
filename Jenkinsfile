@@ -19,5 +19,10 @@ pipeline {
                 sh 'docker version'
             }
         }
+        stage('3. docker Build') {
+            steps {
+                sh 'docker build -t ex02-app:latest'
+            }
+        }
     }
 }
